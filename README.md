@@ -19,50 +19,38 @@ Based on various meteorological surveys and people's styles, the service provide
 You are required to model the demand for shared bikes with the available independent variables. It will be used by the management to understand how exactly the demands vary with different features. They can accordingly manipulate the business strategy to meet the demand levels and meet the customer's expectations. Further, the model will be a good way for management to understand the demand dynamics of a new market. 
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+* [Technologies Used](#technologies-used)
 
-<!-- You can include any other section that is pertinent to your problem -->
 
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+We have done multiple linear regression using various techniques and arrived at an optimum model that can predict the count of bike rentals using various parameters.  The model has a good R-Squared value (0.834) on the train set and has a reasonable value for the test set (0.794).
+    
+**Regression Fit Line Equation**
+     
+count = 0.133 + 0.233 * year + 0.522 * temp - 0.152 * windspeed + 0.053 * Aug + 0.111 * Sep - 0.045 * Sun - 0.282 * Light Snow - 0.081 * "Mist + Cloudy" + 0.102 * summer + 0.137 * winter
+       
+Some of the observations from the model are:
+     
+* Temperature is the most signficant parameter that determines demand.  It has a beta coefficent of 0.522 in the model.  It positively impacts the count of rentals
+* People prefer to rent bikes during clear weather.  Light snow & cloudy/misty weathers are less preferred.  This reflects in the model as well where light snow has a -ve weight.
+* Light Snow has a high correlation to the count.  It is -ve'ly impactiing the bike rental.
+* Windspeed has -ve correlation with demand.  People do not prefer to drive a bike when it is windy.
+* Winter season has a high +ve correlation.  People like to rent bikes in winter.
+* Saturday & Wednesday have a higher spread of rentals
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+- Pandas
+- Matlibplot
+- Python
+- Seaborn
+- StatsModel
+- Scikit-learn
+- Numpy
+- Jupyter Lab
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by - [harish-babu](https://github.com/harish-babu)
